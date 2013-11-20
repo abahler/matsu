@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html style="height: 100%;">
+<head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>OCC Project Matsu</title>
+	<link rel="shortcut icon" href="/static/img/favicon.ico">
+
+
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feeds/rss/">
+	<link rel="alternate" type="application/atom+xml" title="Atom" href="/blog/feeds/atom/">
+
+	<link rel="stylesheet" href="{% static "assets/css/bootstrap.css" %}" />
+	<link rel="stylesheet" href="{% static "assets/css/mezzanine.css" %}" />
+	<link rel="stylesheet" href="{% static "assets/css/osdc.css" %}" />
+
+	<!--
+	<script src="/static/mezzanine/js/jquery-1.7.1.min.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
+	-->
+
+	<script>
+	$(function() {
+		$('.middleinput:text, textarea').addClass('xlarge');
+		$('.control-group label').addClass('control-label');
+	});
+	</script>
+
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="shortcut icon" href="/static/img/favicon.ico"/>
+
+
+</head>
+
+<body id="body" style="height: 100%;">
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="brand" href="http://www.opensciencedatacloud.org">Open Science Data Cloud</a>
+			<div class="nav-collapse collapse">
+				<ul class="nav">
+					<li id="nav-about"><a href="/index/">About Matsu</a></li>
+				 	<li id="nav-analytics"><a href="http://matsu-analytics.opensciencedatacloud.org/">Analytics</a></li>
+				 	<li id="nav-webapps"><a href="/web-applications/">Web Applications</a></li>
+				 	<li id="nav-contact"><a href="/contact/">Contact</a></li>
+				</ul>
+			</div>
+		</div><!-- end .container -->
+	</div><!-- end .navbar-inner -->
+</div><!-- end .navbar, .navbar-fixed-top -->
+
+<div class="content">
+	<div class="container">
+		<header class="jumbotron">
+			<p><a href="http://www.opensciencedatacloud.org/"><strong>&larr; Back to OSDC main</strong></a></p>
+		  	<h1>Web Applications</h1>
+		  	<p class="lead">An introductory sentence about what these web applications do, their purpose, etc.</p>
+		</header>
+	</div>
+
+	<div class="container">
+ 
+	<div class="row">
+		<div class="span4">
+			<h3 class="sub-topic"><a href="http://matsu.opencloudconsortium.org/namibiaflood">Namibia Flood Dashboard</a></h3>
+			<p>Explanatory text about the Namibia Flood Dashboard.</p>
+			<p>Explanatory text about the Namibia Flood Dashboard.</p>
+			<p>Explanatory text about the Namibia Flood Dashboard.</p>
+			<p>Explanatory text about the Namibia Flood Dashboard.</p>
+			<p>Explanatory text about the Namibia Flood Dashboard, with <a href="http://matsu.opencloudconsortium.org/namibiaflood">additional link</a>.</p>
+			<!--
+			<p><a href="http://matsu.opencloudconsortium.org/namibiaflood">View the Namibia Flood Dashboard.</a></p>
+			-->
+		</div><!-- end .span4 -->
+
+		<div class="span4">
+			<h3 class="sub-topic"><a href="http://matsu.opencloudconsortium.org/wcps/session/login/">Web Coverage Processing Service</a></h3> 
+			<p>Explanatory text about WCPS.</p>
+			<p>Explanatory text about the WCPS.</p>
+			<p>Explanatory text about the WCPS.</p>
+			<p>Explanatory text about the WCPS.</p>
+			<p>Explanatory text about the WCPS, with <a href="http://matsu.opencloudconsortium.org/wcps/session/login/">additional link</a>.</p>
+			<!--
+			<p><a href="http://matsu.opencloudconsortium.org/wcps/session/login/">View the WCPS.</a></p> 
+			-->
+		</div>
+		
+	</div><!-- end .row -->
+
+	</div><!-- end .container -->
+
+</div><!-- end .content -->
+
+<div class="modal-footer">
+  	<div class="container"> The OSDC is a resource of the <a href="http://opencloudconsortium.org/">Open Cloud Consortium</a> 
+  	and made possible by our <a href="http://www.opensciencedatacloud.org/sponsors"> sponsors.
+	</div>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45727037-1', 'opensciencedatacloud.org');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

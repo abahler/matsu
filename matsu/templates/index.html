@@ -1,0 +1,154 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>OCC Project Matsu</title>
+	<link rel="shortcut icon" href="/static/img/favicon.ico">
+
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feeds/rss/">
+	<link rel="alternate" type="application/atom+xml" title="Atom" href="/blog/feeds/atom/">
+
+	<link rel="stylesheet" href="{% static "assets/css/bootstrap.css" %}" />
+	<link rel="stylesheet" href="{% static "assets/css/mezzanine.css" %}" />
+	<link rel="stylesheet" href="{% static "assets/css/osdc.css" %}" />
+
+
+	<!--
+	<script src="/static/mezzanine/js/jquery-1.7.1.min.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
+	-->
+
+	<script>
+	$(function() {
+		$('.middleinput:text, textarea').addClass('xlarge');
+		$('.control-group label').addClass('control-label');
+	});
+	</script>
+
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="shortcut icon" href="/static/img/favicon.ico"/>
+</head>
+
+<body id="body" style="height: 100%;">
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="brand" href="http://www.opensciencedatacloud.org">Open Science Data Cloud</a>
+			<div class="nav-collapse collapse">
+				<ul class="nav">
+					<li id="nav-about"><a href="/index/">About Matsu</a></li>
+				 	<li id="nav-analytics"><a href="http://matsu-analytics.opensciencedatacloud.org/">Analytics</a></li>
+				 	<li id="nav-webapps"><a href="/web-applications/">Web Applications</a></li>
+				 	<li id="nav-contact"><a href="/contact/">Contact</a></li>
+				</ul>
+			</div>
+		</div><!-- end .container -->
+	</div><!-- end .navbar-inner -->
+</div><!-- end .navbar, .navbar-fixed-top -->
+
+<div class="content">
+	<div class="container">
+		<header class="jumbotron">
+			<p><a href="http://www.opensciencedatacloud.org/"><strong>&larr; Back to OSDC main</strong></a></p>
+		  	<h1>OCC Project Matsu</h1>
+		  	<p class="lead">An open source project for cloud-based processing of
+		  	satellite imagery to support the earth sciences.</p>
+		</header>
+	</div>
+
+	<div class="container">
+ 
+	<div class="row">
+		<div class="span4">
+			<h3 class="sub-topic">Project Matsu</h3>
+			<p>
+			Project Matsu is a collaboration between NASA and the Open Cloud
+			Consortium to develop open source technology for cloud-based
+			processing of satellite imagery to support the earth sciences.
+			Technology developed by the collaboration include:
+			<ul>
+			<li>The Namibia Flood Dashboard.</li>
+			<li>MapReduced based analytics for identifying floods and CO<sub>2</sub> concentrations.</li>
+			<li>Using elastic infrastructure-as-a-service to create Level
+			1 images each day.</li>
+			<li>A Hadoop-based OGC-compliant tiling service and Web MapService.</li>
+			</ul>
+			</p>
+			<p>You can learn more from these <a href="/matsu-demos/">five minute videos</a> introducing some Matsu tools.</p>
+		</div><!-- end .span4 -->
+
+		<div class="span4">
+			<h3 class="sub-topic">Matsu Resources</h3> 
+			<ul>
+			<li>Daily Namibia <a
+			href="http://matsu.opencloudconsortium.org/namibiaflood">Flood
+			Dashboard</a></li>
+			<!-- <li>Hadoop-supported Web Map Service (<a href="http://lvoc-matsu.opensciencedatacloud.org/SimpleWMS/">WMS</a>) -->
+			<li>Hadoop-supported Web Map Service Areas of Interest:</li>
+			<ul>
+			<li><a href=" http://lvoc-matsu.opensciencedatacloud.org/SimpleWMS/?lat=63.65&lng=-19.3261&z=10&points=clusters&rgb=false&co2=true">Carbon Monoxide cluster centers from volcanic eruption</a></li>
+			<li><a href=" http://lvoc-matsu.opensciencedatacloud.org/SimpleWMS/?lat=22.53&lng=28.4&z=12&rgb=true&flood=true">Irrigation Patterns in the Sahara</a></li>
+			<li><a href="http://lvoc-matsu.opensciencedatacloud.org/SimpleWMS/?rgb=false&TOPO_raw=true&lat=-7.2&lng=20.0&z=10">Elevation</a></li>
+			<li><a href="http://lvoc-matsu.opensciencedatacloud.org/SimpleWMS/?lat=-17.5&lng=15.8&z=10&rgb=true&co2=false&flood=true&points=none">Water Classifier Namibia</a></li>
+			<li><a href="http://lvoc-matsu.opensciencedatacloud.org/SimpleWMS/?lat=43.66&lng=10.44&z=10&rgb=true&co2=false&flood=true&points=none">Water Classifier Italian coast</a></li>
+			</ul>
+			<li><a href="http://lvoc-matsu.opensciencedatacloud.org/AvailableImages/available.jsp">Available Matsu images</a></li>
+			</ul>
+		</div>
+
+		<div class="span4">
+			<h3 class="sub-topic">Matsu Support</h3> 
+			<ul>
+			<li>The code can be found at the <a href="https://github.com/opencloudconsortium/matsu-project">OCC Github site</a>. </li>
+			<li>Description of Matsu <a href="matsu-workflow-20120907-v4.pdf">Tile and WMS Services</a>.</li>
+			<li>Share your feedback or ask a question using the <a href="/contact/">contact form</a>.</li>
+			<!--
+			<li>Sample <a
+			href="http://lvoc-matsu.opensciencedatacloud.org/SimpleWMS/?lat=63.5427&lng=-19.3261">CO<sub>2</sub>
+			Detection</a> Query (click "CO<sub>2</sub>")  </li>
+			<li>Sample <a
+			href="http://lvoc-matsu.opensciencedatacloud.org/SimpleWMS/?lat=-17.4&lng=15.8&z=9">Flood
+			Detection</a> Query (click "cloud, land, water")</li> 
+			-->
+			</ul>
+		</div>
+	</div><!-- end .row -->
+
+	</div><!-- end .container -->
+
+</div><!-- end .content -->
+
+<div class="modal-footer">
+  	<div class="container"> The OSDC is a resource of the <a href="http://opencloudconsortium.org/">Open Cloud Consortium</a> 
+  	and made possible by our <a href="http://www.opensciencedatacloud.org/sponsors"> sponsors.
+	</div>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45727037-1', 'opensciencedatacloud.org');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
