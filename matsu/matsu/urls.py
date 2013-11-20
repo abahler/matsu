@@ -6,7 +6,7 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
     url(r'^$', 'contactform.views.home'),
-    url(r'^index/$', 'contactform.views.home'),
+    url(r'^about/$', 'contactform.views.home'),
     url(r'^web-applications/', 'contactform.views.webapps'),
     url(r'^contact/', 'contactform.views.contact'),
     url(r'^matsu-demos/', 'contactform.views.matsu_demos')

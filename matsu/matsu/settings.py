@@ -157,3 +157,6 @@ LOGGING = {
         },
     }
 }
+
+# Inbox to receive submitted contact forms
+CONTACT_EMAIL = "abahler@uchicago.edu"
