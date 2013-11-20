@@ -1,44 +1,45 @@
+{% load static %}
 <!DOCTYPE html>
 
-<html style="height: 100%;">
+<html lang="en">
 <head>
 
-<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width">
-<meta name="keywords" content="">
-<meta name="description" content="">
-<title>OCC Project Matsu</title>
-<link rel="shortcut icon" href="/static/img/favicon.ico">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>OCC Project Matsu</title>
+	<link rel="shortcut icon" href="/static/img/favicon.ico">
 
 
-<link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feeds/rss/">
-<link rel="alternate" type="application/atom+xml" title="Atom" href="/blog/feeds/atom/">
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feeds/rss/">
+	<link rel="alternate" type="application/atom+xml" title="Atom" href="/blog/feeds/atom/">
 
 
 
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/mezzanine.css">
-<link rel="stylesheet" href="css/osdc.css">
+	<link rel="stylesheet" href="{% static "assets/css/bootstrap.css" %}" />
+	<link rel="stylesheet" href="{% static "assets/css/mezzanine.css" %}" />
+	<link rel="stylesheet" href="{% static "assets/css/osdc.css" %}" />
 
 
-<!--
-<script src="/static/mezzanine/js/jquery-1.7.1.min.js"></script>
-<script src="/static/js/bootstrap.min.js"></script>
--->
+	<!--
+	<script src="/static/mezzanine/js/jquery-1.7.1.min.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
+	-->
 
-<script>
-$(function() {
-    $('.middleinput:text, textarea').addClass('xlarge');
-    $('.control-group label').addClass('control-label');
-});
-</script>
+	<script>
+	$(function() {
+		$('.middleinput:text, textarea').addClass('xlarge');
+		$('.control-group label').addClass('control-label');
+	});
+	</script>
 
 
-<!--[if lt IE 9]>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 
-<link rel="shortcut icon" href="/static/img/favicon.ico"/>
+	<link rel="shortcut icon" href="/static/img/favicon.ico"/>
 
 
 </head>
@@ -69,26 +70,13 @@ $(function() {
 <div class="content">
 	
 	<div class="container">
-		<header class="jumbotron">
+		<header class="jumbotron thankyou">
 			<p><a href="http://www.opensciencedatacloud.org/"><strong>&larr; Back to OSDC main</strong></a></p>
-		  	<h1>Contact Us</h1>
-		  	<p class="lead">Let us know what you like about Matsu, and what this project can do better.</p>
+		  	<h1>Thank You</h1>
+		  	<p class="lead">Your message has been received. <br />If you asked a question, someone from the Matsu team will contact you within two business days.</p>
+		  	<p class="back"><a href="index.html">Back to Matsu home.</a></p>
 		</header>
 	</div>
-
-	<div class="container">
- 		<!-- 
- 		These are placeholders. 
- 		Django form will go  here with "name", "email", "company/organization" and "message" fields 
- 		-->
-		<form id="contact" action="#" method="post">
-		<p><label for="name">Name: </label> <input type="text" name="name" /></p>
-		<p><label for="company">Company/Organization: </label> <input type="text" name="company" /></p>
-		<p><label for="email">Email: </label> <input type="text" name="email" /></p>
-		<p><label for="message">Questions or Comments: </label> <textarea name="message"></textarea></p>
-		<input type="submit" value="Send Feedback">
-		</form>
-	</div><!-- end .container -->
 
 </div><!-- end .content -->
 

@@ -1,46 +1,41 @@
+{% load static %}
 <!DOCTYPE html>
 
-<html style="height: 100%;">
+<html lang="en">
 <head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>OCC Project Matsu</title>
+	<link rel="shortcut icon" href="/static/img/favicon.ico">
 
-<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width">
-<meta name="keywords" content="">
-<meta name="description" content="">
-<title>OCC Project Matsu</title>
-<link rel="shortcut icon" href="/static/img/favicon.ico">
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feeds/rss/">
+	<link rel="alternate" type="application/atom+xml" title="Atom" href="/blog/feeds/atom/">
 
-
-<link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feeds/rss/">
-<link rel="alternate" type="application/atom+xml" title="Atom" href="/blog/feeds/atom/">
-
-
-
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/mezzanine.css">
-<link rel="stylesheet" href="css/osdc.css">
+	<link rel="stylesheet" href="{% static "assets/css/bootstrap.css" %}" />
+	<link rel="stylesheet" href="{% static "assets/css/mezzanine.css" %}" />
+	<link rel="stylesheet" href="{% static "assets/css/osdc.css" %}" />
 
 
-<!--
-<script src="/static/mezzanine/js/jquery-1.7.1.min.js"></script>
-<script src="/static/js/bootstrap.min.js"></script>
--->
+	<!--
+	<script src="/static/mezzanine/js/jquery-1.7.1.min.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
+	-->
 
-<script>
-$(function() {
-    $('.middleinput:text, textarea').addClass('xlarge');
-    $('.control-group label').addClass('control-label');
-});
-</script>
-
-
-<!--[if lt IE 9]>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-
-<link rel="shortcut icon" href="/static/img/favicon.ico"/>
+	<script>
+	$(function() {
+		$('.middleinput:text, textarea').addClass('xlarge');
+		$('.control-group label').addClass('control-label');
+	});
+	</script>
 
 
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="shortcut icon" href="/static/img/favicon.ico"/>
 </head>
 
 <body id="body" style="height: 100%;">
@@ -56,10 +51,10 @@ $(function() {
 			<a class="brand" href="http://www.opensciencedatacloud.org">Open Science Data Cloud</a>
 			<div class="nav-collapse collapse">
 				<ul class="nav">
-					<li id="nav-about"><a href="index.html">About Matsu</a></li>
+					<li id="nav-about"><a href="/index/">About Matsu</a></li>
 				 	<li id="nav-analytics"><a href="http://matsu-analytics.opensciencedatacloud.org/">Analytics</a></li>
-				 	<li id="nav-webapps"><a href="webapplications.html">Web Applications</a></li>
-				 	<li id="nav-contact"><a href="contact.html">Contact</a></li>
+				 	<li id="nav-webapps"><a href="/web-applications/">Web Applications</a></li>
+				 	<li id="nav-contact"><a href="/contact/">Contact</a></li>
 				</ul>
 			</div>
 		</div><!-- end .container -->
@@ -94,7 +89,7 @@ $(function() {
 			<li>A Hadoop-based OGC-compliant tiling service and Web MapService.</li>
 			</ul>
 			</p>
-			<p>You can learn more from these <a href="matsu-demonstrations.html">five minute videos</a> introducing some Matsu tools.</p>
+			<p>You can learn more from these <a href="/matsu-demos/">five minute videos</a> introducing some Matsu tools.</p>
 		</div><!-- end .span4 -->
 
 		<div class="span4">
@@ -121,7 +116,7 @@ $(function() {
 			<ul>
 			<li>The code can be found at the <a href="https://github.com/opencloudconsortium/matsu-project">OCC Github site</a>. </li>
 			<li>Description of Matsu <a href="matsu-workflow-20120907-v4.pdf">Tile and WMS Services</a>.</li>
-			<li>Share your feedback or ask a question using the <a href="contact.html">contact form</a>.</li>
+			<li>Share your feedback or ask a question using the <a href="/contact/">contact form</a>.</li>
 			<!--
 			<li>Sample <a
 			href="http://lvoc-matsu.opensciencedatacloud.org/SimpleWMS/?lat=63.5427&lng=-19.3261">CO<sub>2</sub>
