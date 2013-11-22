@@ -9,6 +9,6 @@ urlpatterns = patterns('',
     url(r'^about/$', 'contactform.views.home'),
     url(r'^web-applications/', 'contactform.views.webapps'),
     url(r'^contact/', 'contactform.views.contact'),
-    url(r'^matsu-demos/', 'contactform.views.matsu_demos')
-    # Deliberately omitted redirect for "thank you" page since we don't want users visiting directly
+    # url(r'^thankyou/', 'contactform.views.thankyou'),
+    url(r'^matsu-demos/', 'contactform.views.matsu_demos'),
 )

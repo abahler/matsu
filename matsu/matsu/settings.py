@@ -160,3 +160,6 @@ LOGGING = {
 
 # Inbox to receive submitted contact forms
 CONTACT_EMAIL = "abahler@uchicago.edu"
+
+# Enable dummy backend for testing emailed forms
+EMAIL_BACKEND = "django.core.mail.backends.dummy.EmailBackend"
