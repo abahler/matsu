@@ -5,7 +5,8 @@ from django.template import Context, RequestContext
 from django.http import HttpResponseRedirect
 # Import contact form you created in forms.py
 from forms import MatsuContactForm
-from django.core.mail import EmailMessage, send_mail, BadHeaderError
+# Importing get_connection necessary if you have send_mail or EmailMessage?
+from django.core.mail import EmailMessage, send_mail, BadHeaderError, get_connection
 from django.forms.util import ErrorList
 import smtplib
 
@@ -20,14 +21,15 @@ def webapps(request):
 def build_message(form):
     msg_list = []
     msg_list.append('Summary of submitted information:\n\n')
-    msg_list.append('From:\n')
+    msg_list.append('From: ')
     msg_list.append(form.cleaned_data['name'])
-    msg_list.append('\nOrganization/University\n')
+    msg_list.append('\nOrganization/University: ')
     msg_list.append(form.cleaned_data['organization'])
-    msg_list.append('\nEmail\n')
+    msg_list.append('\nEmail: ')
     msg_list.append(form.cleaned_data['sender'])
-    msg_list.append('\nMessage:\n')
+    msg_list.append('\nMessage: ')
     msg_list.append(form.cleaned_data['message'])
+    msg_list.append('\n')
     return ''.join(msg_list)
 
 # Show form or submit it
@@ -39,8 +41,20 @@ def contact(request):
 		
 		# If all validation rules pass...
 		if form.is_valid():
-			return HttpResponseRedirect("thankyou.html")
-
+			subject = "New feedback from Matsu user"
+			sender = form.cleaned_data['sender']
+			message = build_message(form)
+			recipients = ["abahler@uchicago.edu"]
+			
+			# Trying below instead of "send_mail(subject, message, sender, recipients)"
+			emailMatsu = EmailMessage(subject, message, sender, recipients)
+		
+			try:
+				emailMatsu.send()
+				return HttpResponseRedirect("/contact/thankyou/")
+			except smtplib.SMTPRecipientsRefused as e:
+				form._errors["sender"] = ErrorList(["Domain of address %s does not exist" % sender])
+				
 	# Otherwise, if no form submitted
 	else:
 		form = MatsuContactForm()
@@ -51,3 +65,6 @@ def contact(request):
 # Show demos page
 def matsu_demos(request):
 	return render_to_response("matsu-demonstrations.html")
+
+def thankyou(request):
+		return render_to_response("thankyou.html")

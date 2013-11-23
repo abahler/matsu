@@ -201,8 +201,8 @@ body {
 	padding-bottom: 50px;
 }
 
-.container > .thankyou {
-	/* height: 475px; */
+.thankyou {
+	height: 490px;
 }
 
 .back {
