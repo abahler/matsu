@@ -14,7 +14,7 @@
 		<form id="contact" action="/contact/" method="post">{% csrf_token %}
 			<fieldset>
 				<div class="control-group {% if form.name.errors %}error{% endif %}">
-				  <label class="control-label" for="id_name">Name:</label>
+				  <label class="control-label" for="id_name">Name:*</label>
 				  <div class="controls">
 					{{ form.name }}
 					<span class="help-inline">{{ form.name.errors }}</span>
@@ -22,7 +22,7 @@
 				</div>
 				
 				<div class="control-group {% if form.organization.errors %}error{% endif %}">
-				  <label class="control-label" for="id_organization">Organization/University:</label>
+				  <label class="control-label" for="id_organization">Organization/University:*</label>
 				  <div class="controls">
 					{{ form.organization }}
 					<span class="help-inline">{{ form.organization.errors }}</span>
@@ -30,7 +30,7 @@
 				</div>
 	
 				<div class="control-group {% if form.sender.errors %}error{% endif %}">
-				  <label class="control-label" for="id_sender">Email:</label>
+				  <label class="control-label" for="id_sender">Email:*</label>
 				  <div class="controls">
 					{{ form.sender }}
 					<span class="help-inline">{{ form.sender.errors }}</span>
@@ -38,7 +38,7 @@
 				</div>
 
 				<div class="control-group {% if form.message.errors %}error{% endif %}">
-				  <label class="control-label" for="id_message">Message:</label>
+				  <label class="control-label" for="id_message">Message:*</label>
 				  <div class="controls">
 					{{ form.message }}
 					<span class="help-inline">{{ form.message.errors }}</span>
@@ -46,7 +46,7 @@
 				</div>
 
 			</fieldset>
-			<input type="reset" value="Clear All" /> &nbsp;<input type="submit" value="Send Feedback" />
+			<input type="submit" class="button" value="Send Feedback" /> &nbsp;<input type="reset" class="button" value="Clear All" />
 		</form>
 	</div><!-- end .container -->
 

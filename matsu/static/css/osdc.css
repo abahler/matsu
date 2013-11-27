@@ -4,13 +4,28 @@
 
 /* Body and structure
 -------------------------------------------------- */
-body {
-  position: relative;
-//  padding-top: 90px;
-  background-color: #fff;
-  background-image: url(../img/grid-18px-masked.png);
-  background-repeat: repeat-x;
-  background-position: 0 40px;
+
+* {
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+.content {
+	min-height: 90%;
+	height: auto;
+	padding: 0 auto -3em;
+}
+
+/* modal-footer and push both originally 3em; */
+.push {
+	height: 1em;
+}
+
+.modal-footer {
+	height: 3em;
 }
 
 /* Tweak navbar brand link to be super sleek
@@ -197,6 +212,11 @@ body {
     margin-right:10px;
 }
 
+.button {
+	border-radius: 0;
+	padding: 7.5px;
+}
+
 .row {
 	padding-bottom: 50px;
 }
@@ -207,11 +227,4 @@ body {
 
 .back {
 	text-align: center;
-}
-
-.modal-footer {
-	width: 100%;
-	position: relative;
-	bottom: 0;
-	left: 0;
 }

@@ -3,10 +3,9 @@ from django.shortcuts import render, render_to_response
 from django.template.loader import get_template
 from django.template import Context, RequestContext
 from django.http import HttpResponseRedirect
-# Import contact form you created in forms.py
 from forms import MatsuContactForm
 # Importing get_connection necessary if you have send_mail or EmailMessage?
-from django.core.mail import EmailMessage, send_mail, BadHeaderError, get_connection
+from django.core.mail import EmailMessage, send_mail, BadHeaderError
 from django.forms.util import ErrorList
 import smtplib
 
