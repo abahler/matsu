@@ -12,7 +12,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/Users/alexbahler/Desktop/UChicago_AlexBahler/projects/MatsuSite/matsu_informational/matsu/database.db',                      # Or path to database file if using sqlite3.
+        'NAME': '/home/ubuntu/matsu-demo/matsu/matsu/database.db',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
@@ -71,7 +71,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows. Use absolute paths, not relative paths.
-    ("assets", "/Users/alexbahler/Desktop/UChicago_AlexBahler/projects/MatsuSite/matsu_informational/matsu/static"),
+    ("assets", "/home/ubuntu/matsu-demo/matsu/matsu/static"),
 )
 
 # List of finder classes that know how to find static files in
@@ -111,7 +111,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-	'/Users/alexbahler/Desktop/UChicago_AlexBahler/projects/MatsuSite/matsu_informational/matsu/templates',
+	'/home/ubuntu/matsu-demo/matsu/matsu/templates',
 )
 
 INSTALLED_APPS = (
@@ -159,4 +159,4 @@ LOGGING = {
 }
 
 # Enable backend for testing emailed forms
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"

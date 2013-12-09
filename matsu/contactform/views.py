@@ -66,4 +66,10 @@ def matsu_demos(request):
 	return render_to_response("matsu-demonstrations.html")
 
 def thankyou(request):
-		return render_to_response("thankyou.html")
+	return render_to_response("thankyou.html")
+
+def file_not_found(request):
+        return render_to_response("404.html")
+
+def server_error(request):
+        return render_to_response("500.html")
