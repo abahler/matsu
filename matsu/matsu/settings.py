@@ -158,5 +158,5 @@ LOGGING = {
     }
 }
 
-# Enable backend for testing emailed forms
+# Enable backend for testing emailed forms locally
 # EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
