@@ -160,3 +160,4 @@ LOGGING = {
 
 # Enable backend for testing emailed forms locally
 # EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+CONTACT_EMAIL = "matsu.feedback@opencloudconsortium.org"

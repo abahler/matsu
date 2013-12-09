@@ -7,6 +7,7 @@ from forms import MatsuContactForm
 # Importing get_connection necessary if you have send_mail or EmailMessage?
 from django.core.mail import EmailMessage, send_mail, BadHeaderError
 from django.forms.util import ErrorList
+from django.conf import settings
 import smtplib
 
 def home(request):
@@ -43,7 +44,7 @@ def contact(request):
 			subject = "New feedback from Matsu user"
 			sender = form.cleaned_data['sender']
 			message = build_message(form)
-			recipients = ["abahler@uchicago.edu"]
+			recipients = [settings.CONTACT_EMAIL]
 			
 			# Trying below instead of "send_mail(subject, message, sender, recipients)"
 			emailMatsu = EmailMessage(subject, message, sender, recipients)
