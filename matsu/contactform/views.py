@@ -62,7 +62,6 @@ def contact(request):
 	# Including third argument for csrf verification, Without it, you get "CSRF aborted" 403 error.
 	return render_to_response("contact.html", {'form' : form}, context_instance=RequestContext(request))
 
-# Show demos page
 def matsu_demos(request):
 	return render_to_response("matsu-demonstrations.html")
 
