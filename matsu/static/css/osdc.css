@@ -36,7 +36,7 @@ html, body {
   margin-left: 20px;
   float: left; /* originally floated right */
   font-weight: bold;
-  color: #b8e0f1;
+  color: #333333;
   text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
   -webkit-transition: all .2s linear;
      -moz-transition: all .2s linear;
