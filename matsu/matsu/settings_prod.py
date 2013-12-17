@@ -1,6 +1,6 @@
 # Django settings for matsu project.
 
-DEBUG = True
+DEBUG = False
 # Set TEMPLATE_DEBUG to DEBUG for true during development
 TEMPLATE_DEBUG = False
 
