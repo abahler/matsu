@@ -1,3 +1,4 @@
+# Import os because django.view.static.serve depends on it
 import os
 from django.core.context_processors import csrf
 from django.shortcuts import render, render_to_response
@@ -8,6 +9,7 @@ from forms import MatsuContactForm
 # Importing get_connection necessary if you have send_mail or EmailMessage?
 from django.core.mail import EmailMessage, send_mail, BadHeaderError
 from django.forms.util import ErrorList
+from django.conf import settings
 import smtplib
 # Serve the PDF
 from django.views.static import serve
@@ -46,7 +48,7 @@ def contact(request):
 			subject = "New feedback from Matsu user"
 			sender = form.cleaned_data['sender']
 			message = build_message(form)
-			recipients = ["abahler@uchicago.edu"]
+			recipients = [settings.CONTACT_EMAIL]
 			
 			# Trying below instead of "send_mail(subject, message, sender, recipients)"
 			emailMatsu = EmailMessage(subject, message, sender, recipients)
@@ -64,7 +66,6 @@ def contact(request):
 	# Including third argument for csrf verification, Without it, you get "CSRF aborted" 403 error.
 	return render_to_response("contact.html", {'form' : form}, context_instance=RequestContext(request))
 
-# Show demos page
 def matsu_demos(request):
 	return render_to_response("matsu-demonstrations.html")
 
@@ -72,7 +73,7 @@ def thankyou(request):
 	return render_to_response("thankyou.html")
 
 def file_not_found(request):
-	return render_to_response("404.html")
+        return render_to_response("404.html")
 
 def server_error(request):
 	return render_to_response("500.html")
@@ -80,4 +81,3 @@ def server_error(request):
 def workflow_pdf(request):
 	filepath = '../static/media/pdf/matsu-workflow-v4.pdf'
 	return serve(request, os.path.basename(filepath), "assets/media/pdf/", os.path.dirname(filepath))
-	

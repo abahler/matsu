@@ -1,10 +1,12 @@
 # Django settings for matsu project.
 
+# Set DEBUG to True in development, False in production
 DEBUG = True
+# Set TEMPLATE_DEBUG to DEBUG for true during development
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('Alex Bahler', 'abahler@uchicago.edu'),
 )
 
 MANAGERS = ADMINS
@@ -23,7 +25,7 @@ DATABASES = {
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.matsu.opensciencedatacloud.org']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -71,7 +73,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows. Use absolute paths, not relative paths.
-    ("assets", "/Users/alexbahler/Desktop/UChicago_AlexBahler/projects/!!complete/MatsuSite/matsu_informational/matsu/static"),
+    ("assets", "/Users/alexbahler/Desktop/UChicago_AlexBahler/projects/!!complete/MatsuSite/matsu_informational/matsu/static/"),
 )
 
 # List of finder classes that know how to find static files in
@@ -83,7 +85,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = ')f6)v8r((zq!m5y$ohd0(%(c7g^trnymkx5g#brjll8+2xz(f2'
+SECRET_KEY = ')f6)v8r((zq!m5y$ohd0(%(c7g^trnymkx5gbrjll8+2xz(f2'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -111,7 +113,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-	'/Users/alexbahler/Desktop/UChicago_AlexBahler/projects/!!complete/MatsuSite/matsu_informational/matsu/templates',
+    '/Users/alexbahler/Desktop/UChicago_AlexBahler/projects/!!complete/MatsuSite/matsu_informational/matsu/templates',
 )
 
 INSTALLED_APPS = (
@@ -158,5 +160,8 @@ LOGGING = {
     }
 }
 
-# Enable backend for testing emailed forms
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+# Console backend for testing email form. Delete or comment out in production, as postfix will take care of it.
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Admin email for contact form submissions.
+CONTACT_EMAIL = "matsu.feedback@opencloudconsortium.org"
