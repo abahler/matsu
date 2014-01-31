@@ -80,4 +80,4 @@ def server_error(request):
 
 def workflow_pdf(request):
 	filepath = '../static/media/pdf/matsu-workflow-v4.pdf'
-	return serve(request, os.path.basename(filepath), "assets/media/pdf/", os.path.dirname(filepath))
+	return serve(request, os.path.basename(filepath), '/assets/media/pdf/', os.path.dirname(filepath))
