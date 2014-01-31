@@ -1,3 +1,4 @@
+import os
 from django.core.context_processors import csrf
 from django.shortcuts import render, render_to_response
 from django.template.loader import get_template
@@ -8,6 +9,8 @@ from forms import MatsuContactForm
 from django.core.mail import EmailMessage, send_mail, BadHeaderError
 from django.forms.util import ErrorList
 import smtplib
+# Serve the PDF
+from django.views.static import serve
 
 def home(request):
 	return render_to_response("index.html")
@@ -73,3 +76,8 @@ def file_not_found(request):
 
 def server_error(request):
 	return render_to_response("500.html")
+
+def workflow_pdf(request):
+	filepath = '../static/media/pdf/matsu-workflow-v4.pdf'
+	return serve(request, os.path.basename(filepath), "assets/media/pdf/", os.path.dirname(filepath))
+	

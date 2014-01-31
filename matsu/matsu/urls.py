@@ -13,4 +13,5 @@ urlpatterns = patterns('',
     url(r'^matsu-demos/', 'contactform.views.matsu_demos'),
     url(r'^file-not-found/', 'contactform.views.file_not_found'),
     url(r'^server-error/', 'contactform.views.server_error'),
+    url(r'pdf/matsu-workflow-v4.pdf', 'contactform.views.workflow_pdf'),
 )
